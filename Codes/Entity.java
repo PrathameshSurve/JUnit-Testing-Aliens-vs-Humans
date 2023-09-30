@@ -34,7 +34,9 @@ public class Entity {
     // Method for taking damage
     public void takeDamage(int amount) {
         health -= amount;
-        if (health <= 0) {
+        if (health > 100) {
+            health = 100;
+        } else if (health <= 0) {
             System.out.println(name + " has been defeated.");
         }
     }
